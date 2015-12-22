@@ -1,0 +1,15 @@
+{
+    "id": "trumpet-fish",
+    "images": [
+        "img/trumpet-fish.0.jpeg",
+        "img/trumpet-fish.1.jpeg"
+    ],
+    "name": "Trumpet Fish",
+    "species": "Mahi Mahi",
+    "quantity": "4",
+    "weight": "10-20 lb",
+    "price": 5,
+    "landing": "west-side",
+    "snippet": "Trumpet Fish.  The Next, Next Generation\n\nExperience the future with MOTOROLA XOOM, the world's first tablet powered by Android 3.0 (Honeycomb)."
+
+}
