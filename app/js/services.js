@@ -10,3 +10,13 @@ fresherServices.factory('Ad', ['$resource',
       query: {method:'GET', params:{adId:'ads'}, isArray:true}
     });
   }]);
+
+fresherServices.service('dataService', function($http){
+  this.getData = function(callbackFunc){
+    return $http({
+      method: 'GET',
+      url: 'https://www.freshr-prod.elasticbeanstalk.com/angularApp',
+      params: 'sort_by: date',
+    });
+  };
+});

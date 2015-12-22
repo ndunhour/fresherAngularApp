@@ -4,12 +4,7 @@
         "img/mahi-mahi.0.jpeg",
         "img/mahi-mahi.1.jpeg"
     ],
-    "name": "Here Fishy",
     "species": "Mahi Mahi",
-    "quantity": "4",
-    "weight": "10-20 lb",
-    "price": 5,
-    "landing": "west-side",
     "scientificName": "Coryphaena hippurus",
     "hawaiianName": "Mahimahi",
     "japaneseName": "Shiira",

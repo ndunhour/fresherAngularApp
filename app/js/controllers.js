@@ -20,3 +20,11 @@ fresherControllers.controller('AdDetailCtrl', ['$scope', '$routeParams', 'Ad',
       $scope.mainImageUrl = imageUrl;
     };
   }]);
+
+fresherControllers.controller('DataCtrl', function($scope, $http){
+  $http.get("https://www.freshr-prod.elasticbeanstalk.com/angularApp")
+  .success(function(reponse){
+    $scope.data = reponse;
+    console.log(reponse);
+  });
+});

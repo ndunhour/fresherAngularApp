@@ -15,7 +15,7 @@ fresherApp.config(['$routeProvider',
     $routeProvider.
       when('/ads', {
         templateUrl: 'partials/ad-list.html',
-        controller: 'AdListCtrl'
+        controller: 'DataCtrl'
       }).
       when('/ads/:adId', {
         templateUrl: 'partials/ad-detail.html',
