@@ -12,19 +12,18 @@ fresherControllers.controller('AdListCtrl', ['$scope', 'Ad',
 
 fresherControllers.controller('AdDetailCtrl', ['$scope', '$routeParams', 'Ad',
   function($scope, $routeParams, Ad) {
-    $scope.ad = Ad.get({adId: $routeParams.adId}, function(ad) {
-      $scope.mainImageUrl = ad.images[0];
-    });
-
-    $scope.setImage = function(imageUrl) {
-      $scope.mainImageUrl = imageUrl;
-    };
+    $scope.ads = Ad.get({adId: $routeParams.ads});
   }]);
 
-fresherControllers.controller('DataCtrl', function($scope, $http){
-  $http.get("https://www.freshr-prod.elasticbeanstalk.com/angularApp")
-  .success(function(reponse){
-    $scope.data = reponse;
-    console.log(reponse);
-  });
-});
+fresherControllers.controller('CreateCtrl', ['$scope',
+  function($scope){
+    $scope.fish = {
+      speciesSelect: null,
+      species: [
+        {id: '1', name: 'Ahi'},
+        {id: '2', name: 'Blue Fin Tuna'},
+        {id: '3', name: 'Mahi Mahi'}
+      ]
+    };
+  }
+  ]);

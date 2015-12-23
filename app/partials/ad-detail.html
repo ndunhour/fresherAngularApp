@@ -1,81 +1,39 @@
-<div class="ad-images">
-  <img ng-src="{{img}}"
-       class="ad"
-       ng-repeat="img in ad.images"
-       ng-class="{active: mainImageUrl==img}">
+<div class="detail-wrapper">
+
+  <div class="detail-name">
+    <h1>{{ad.name}}</h1>
+  </div>
+
+  <div class="detail-ad-info">
+    <ul>
+      <li>
+        <span>Quantity: </span>
+        <dl>
+          <dt>{{ad.quantity}}</dt>
+        </dl>
+      </li>
+      <li>
+        <span>Weight: </span>
+        <dl>
+          <dt>{{ad.weight}}</dt>
+        </dl>
+      </li>
+      <li>
+        <span>Price: </span>
+        <dl>
+          <dt>{{ad.price}}</dt>
+        </dl>
+      </li>
+      <li>
+        <span>Landing: </span>
+        <dl>
+          <dt>{{ad.landing}}</dt>
+        </dl>
+      </li>
+    </ul>
+  </div>
+
+
+
+
 </div>
-
-<h1>{{ad.name}}</h1>
-
-<ul>
-  <li>
-    <span>Quantity: </span>
-    <dl>
-      <dt>{{ad.quantity}}</dt>
-    </dl>
-  </li>
-  <li>
-    <span>Weight: </span>
-    <dl>
-      <dt>{{ad.weight}}</dt>
-    </dl>
-  </li>
-  <li>
-    <span>Price: </span>
-    <dl>
-      <dt>{{ad.price}}</dt>
-    </dl>
-  </li>
-  <li>
-    <span>Landing: </span>
-    <dl>
-      <dt>{{ad.landing}}</dt>
-    </dl>
-  </li>
-</ul>
-
-<ul class="ad-thumbs">
-  <li ng-repeat="img in ad.images">
-    <img ng-src="{{img}}" ng-click="setImage(img)">
-  </li>
-</ul>
-
-"species": "Mahi Mahi",
-    "scientificName": "Coryphaena hippurus",
-    "hawaiianName": "Mahimahi",
-    "japaneseName": "Shiira",
-    "about":
-
-<ul class="specs">
-  <li>
-    <span>Species</span>
-    <dl>
-      <dt>{{ad.species}}</dt>
-    </dl>
-  </li>
-  <li>
-    <span>Scientific Name</span>
-    <dl>
-      <dt>{{ad.scientificName}}</dt>
-    </dl>
-  </li>
-  <li>
-    <span>Hawaiian Name</span>
-    <dl>
-      <dt>{{ad.hawaiianName}}</dt>
-    </dl>
-  </li>
-  <li>
-    <span>Japanese Name</span>
-    <dl>
-      <dt>{{ad.japaneseName}}</dt>
-    </dl>
-  </li>
-  <li>
-    <span>About</span>
-    <dl>
-      <dt>{{ad.about}}</dt>
-    </dl>
-  </li>
-</ul>
-

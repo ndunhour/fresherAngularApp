@@ -24,8 +24,7 @@
     <div class="grid-block">
       <!--Body content-->
       <ul class="ads">
-        {{data}}
-        <li ng-repeat="ad in data" class="thumbnail ad-listing">
+        <li ng-repeat="ad in ads" class="thumbnail ad-listing">
           <div class="wrapper">
             <div class="ad-top">
               <div class="username">
@@ -55,16 +54,9 @@
                 <h3>Price: {{ad.price}}</h3>
               </div>
             </div>
-
-
-
-
           </div>
         </li>
       </ul>
-
-
-
     </div>
   </div>
 </div>

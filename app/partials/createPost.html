@@ -1,0 +1,14 @@
+<div class="createPost" ng-controller="CreateCtrl">
+  <form novalidate class="createForm">
+    <label for="speciesSelect">Species: </label>
+    <select name="speciesSelect" ng-model="fish.speciesSelect">
+      <option ng-repeat="fish in fish.species" value="{{fish.id}}">{{fish.name}}</option>
+    </select>
+  </form>
+</div>
+
+
+
+
+
+
