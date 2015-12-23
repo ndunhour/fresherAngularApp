@@ -18,9 +18,11 @@ fresherControllers.controller('AdDetailCtrl', ['$scope', '$routeParams', 'Ad',
 fresherControllers.controller('CreateCtrl', ['$scope',
   function($scope){
     var quantity = [];
+    var price = [];
     $scope.fish = {
       speciesSelect: null,
       sizeSelect: null,
+      locationSelect: null,
       species: [
         {id: '1', name: 'Ahi'},
         {id: '2', name: 'Blue Fin Tuna'},
@@ -31,13 +33,25 @@ fresherControllers.controller('CreateCtrl', ['$scope',
         {id: '2', size: '10-20'},
         {id: '3', size: '20-30'}
       ],
-      price: [],
-      quant: quantity
+      per: ['Per Pound', 'Per Fish'],
+      whole: ['Whole Fish', 'Filet Available'],
+      location: [
+        {id: '1', size: 'Town'},
+        {id: '2', size: 'East'},
+        {id: '3', size: 'Windward'},
+        {id: '4', size: 'North Shore'},
+        {id: '5', size: 'West Oahu'},
+        {id: '5', size: 'Central Oahu'},
+        {id: '6', size: 'All of Oahu'}
+      ]
+
     };
     for(var i=0; i<50; i++) {
-      quantity.push({id: 'i', quantity: i});
+      quantity.push({id: i, quantity: i});
+      price.push({id: i, price: '$ ' + i + '.00'});
     }
     $scope.fish.quantity = quantity;
+    $scope.fish.price = price;
 
   }
   ]);

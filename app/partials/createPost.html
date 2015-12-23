@@ -26,10 +26,22 @@
       <option ng-repeat="fish in fish.price" value="{{fish.price}}">{{fish.price}}</option>
     </select><br>
 
+
+    <label ng-repeat="per in fish.per" for="{{per}}">
+      <input type="radio" ng-value="per" id="{{per}}" per="favorite">{{per}}
+    </label><br>
+
+    <label ng-repeat="whole in fish.whole" for="{{whole}}">
+      <input type="radio" ng-value="whole" id="{{whole}}" whole="favorite">{{whole}}
+    </label><br>
+
+    <label for="locationSelect">Catch Location: </label>
+    <select name="locationSelect" ng-model="fish.locationSelect">
+      <option ng-repeat="fish in fish.location" value="{{fish.location}}">{{fish.location}}</option>
+    </select><br>
+
   </form>
 </div>
-
-
 
 
 
