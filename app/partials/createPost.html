@@ -1,45 +1,83 @@
 <div class="createPost" ng-controller="CreateCtrl">
   <form novalidate class="createForm">
-    <label for="speciesSelect">Species: </label>
-    <select name="speciesSelect" ng-model="fish.speciesSelect">
-      <option ng-repeat="fish in fish.species" value="{{fish.id}}">{{fish.name}}</option>
-    </select><br>
+    <h5>NEW POST</h5>
 
-    <label for="speciesInput">If not listed, Fish Name: </label>
-    <input type="text"><br>
+    <p>
+      <label for="speciesSelect">Species: </label>
+      <select name="speciesSelect" ng-model="fish.speciesSelect">
+        <option ng-repeat="fish in fish.species" value="{{fish.id}}">{{fish.name}}</option>
+      </select><br>
+    </p>
 
-    <label for="sizeSelect">Size: </label>
-    <select name="sizeSelect" ng-model="fish.sizeSelect">
-      <option ng-repeat="fish in fish.size" value="{{fish.id}}">{{fish.size}}</option>
-    </select><br>
+    <p>
+      <label for="speciesInput">If not listed, Fish Name: </label>
+      <input type="text"><br>
+    </p>
 
-    <label for="sizeInput">If not listed, Fish Size: </label>
-    <input type="text"><br>
+    <p>
+      <label for="sizeSelect">Size: </label>
+      <select name="sizeSelect" ng-model="fish.sizeSelect">
+        <option ng-repeat="fish in fish.size" value="{{fish.id}}">{{fish.size}}</option>
+      </select><br>
+    </p>
 
-    <label for="quantitySelect">Quantity: </label>
-    <select name="quantitySelect" ng-model="fish.quantitySelect">
-      <option ng-repeat="fish in fish.quantity" value="{{fish.quantity}}">{{fish.quantity}}</option>
-    </select><br>
+    <p>
+      <label for="sizeInput">If not listed, Fish Size: </label>
+      <input type="text"><br>
+    </p>
 
-    <label for="priceSelect">Price: </label>
-    <select name="priceSelect" ng-model="fish.priceSelect">
-      <option ng-repeat="fish in fish.price" value="{{fish.price}}">{{fish.price}}</option>
-    </select><br>
+    <p>
+      <label for="quantitySelect">Quantity: </label>
+      <select name="quantitySelect" ng-model="fish.quantitySelect">
+        <option ng-repeat="fish in fish.quantity" value="{{fish.quantity}}">{{fish.quantity}}</option>
+      </select><br>
+    </p>
 
+    <p>
+      <label for="priceSelect">Price: </label>
+      <select name="priceSelect" ng-model="fish.priceSelect">
+        <option ng-repeat="fish in fish.price" value="{{fish.price}}">{{fish.price}}</option>
+      </select><br>
+    </p>
 
-    <label ng-repeat="per in fish.per" for="{{per}}">
-      <input type="radio" ng-value="per" id="{{per}}" per="favorite">{{per}}
-    </label><br>
+    <p>
+      <label ng-repeat="per in fish.per" for="{{per}}">
+        <input type="radio" ng-value="per" id="{{per}}" per="favorite">{{per}}
+      </label><br>
+    </p>
 
-    <label ng-repeat="whole in fish.whole" for="{{whole}}">
-      <input type="radio" ng-value="whole" id="{{whole}}" whole="favorite">{{whole}}
-    </label><br>
+    <p>
+      <label ng-repeat="whole in fish.whole" for="{{whole}}">
+        <input type="radio" ng-value="whole" id="{{whole}}" whole="favorite">{{whole}}
+      </label><br>
+    </p>
 
-    <label for="locationSelect">Catch Location: </label>
-    <select name="locationSelect" ng-model="fish.locationSelect">
-      <option ng-repeat="fish in fish.location" value="{{fish.location}}">{{fish.location}}</option>
-    </select><br>
+    <p>
+      <label for="locationSelect">Catch Location: </label>
+      <select name="locationSelect" ng-model="fish.locationSelect">
+        <option ng-repeat="fish in fish.location" value="{{fish.location}}">{{fish.location}}</option>
+      </select><br>
+    </p>
 
+    <p>
+      <label for="additionalDetails">Additional Details:</label>
+      <textarea name="additionalDetails" id="" cols="30" rows="10"></textarea><br>
+    </p>
+
+    <p>
+      <label for="imageSelect">Image:</label>
+      <input id="imageSelect" name="image" type="file"><br>
+    </p>
+
+    <p>
+      <label for="name">Name:</label>
+      <input type="text" id="name"><br>
+    </p>
+
+    <p>
+      <label for="phone">Phone:</label>
+      <input type="text" id="phone"><br>
+    </p>
   </form>
 </div>
 

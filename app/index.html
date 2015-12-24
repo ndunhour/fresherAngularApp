@@ -19,10 +19,35 @@
   <script src="js/services.js"></script>
 </head>
 <body>
-
   <div class="view-container">
-    <div ng-view class="view-frame"></div>
+    <div class="row">
+      <div class="col-md-4">
+        Search: <input ng-model="query">
+        Sort:
+        <select ng-model="orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </div>
+
+      <div class="col-md-4">
+        <h1>FRESHER</h1>
+      </div>
+
+      <div class="col-md-4">
+        <h1>menu icon</h1>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div ng-view class="view-frame col-md-6"></div>
+      <div class="col-md-3"></div>
+    </div>
   </div>
 
 </body>
 </html>
+
+

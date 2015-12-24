@@ -1,62 +1,36 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6">
-      <!--Sidebar content-->
-
-      Search: <input ng-model="query">
-      Sort:
-      <select ng-model="orderProp">
-        <option value="name">Alphabetical</option>
-        <option value="age">Newest</option>
-      </select>
-    </div>
-
-    <div class="col-md-4">
-      <h1>FRESHER</h1>
-    </div>
-    <div class="col-md-2">
-      <h1>menu icon</h1>
-    </div>
-
-
-  </div>
-  <div class="row">
-    <div class="grid-block">
-      <!--Body content-->
-      <ul class="ads">
-        <li ng-repeat="ad in ads" class="thumbnail ad-listing">
-          <div class="wrapper">
-            <div class="ad-top">
-              <div class="username">
-                <h3><a href="#/ads/{{ad.id}}">{{ad.name}}</a></h3>
-              </div>
-              <div class="landing">
-                <h3>Landing: {{ad.landing}}</h3>
-
-              </div>
-            </div>
-
-            <div class="ad-photo">
-              <a href="#/ads/{{ad.id}}" class="thumb"><img ng-src="{{ad.imageUrl}}"></a>
-            </div>
-
-            <div class="ad-info">
-              <div class="species">
-                <h3>Species: {{ad.species}}</h3>
-              </div>
-              <div class="quantity">
-                <h3>Quantity: {{ad.quantity}}</h3>
-              </div>
-              <div class="weight">
-                <h3>Weight: {{ad.weight}}</h3>
-              </div>
-              <div class="price">
-                <h3>Price: {{ad.price}}</h3>
-              </div>
-            </div>
+<div class="something">
+  <ul class="ads">
+    <li ng-repeat="ad in ads" class="thumbnail ad-listing">
+      <div class="wrapper">
+        <div class="ad-top">
+          <div class="username">
+            <h3><a href="#/ads/{{ad.id}}">{{ad.name}}</a></h3>
           </div>
-        </li>
-      </ul>
-    </div>
-  </div>
+
+          <div class="landing">
+            <h3>Landing: {{ad.landing}}</h3>
+          </div>
+        </div>
+
+        <div class="ad-photo">
+          <a href="#/ads/{{ad.id}}" class="thumb"><img ng-src="{{ad.imageUrl}}"></a>
+        </div>
+
+        <div class="ad-info">
+          <div class="species">
+            <h3>Species: {{ad.species}}</h3>
+          </div>
+          <div class="quantity">
+            <h3>Quantity: {{ad.quantity}}</h3>
+          </div>
+          <div class="weight">
+            <h3>Weight: {{ad.weight}}</h3>
+          </div>
+          <div class="price">
+            <h3>Price: {{ad.price}}</h3>
+          </div>
+        </div>
+      </div>
+    </li>
+  </ul>
 </div>

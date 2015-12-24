@@ -5,12 +5,15 @@ body {
 }
 
 .wrapper {
-  max-width: 600px;
   display: block;
-  margin: 0 auto;
   padding: 25px;
 }
 .ad-photo {
 }
 .ad-info {
+}
+.createPost {
+  display: block;
+  background-color: red;
+  padding: 25px;
 }
