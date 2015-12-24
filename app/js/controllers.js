@@ -55,3 +55,14 @@ fresherControllers.controller('CreateCtrl', ['$scope',
 
   }
   ]);
+
+fresherControllers.controller('FishermanCtrl',['$scope',
+  function($scope){
+    $scope.user = {
+      userName: "Name",
+      userPhone: "Phone",
+      location: "Location",
+      licence: "Licence",
+      bio: "Bio"
+    };
+  }]);

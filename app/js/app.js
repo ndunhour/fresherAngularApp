@@ -25,6 +25,10 @@ fresherApp.config(['$routeProvider',
         templateUrl: 'partials/createPost.html',
         controller: 'CreateCtrl'
       }).
+      when('/fisherman', {
+        templateUrl: 'partials/fisherman.html',
+        controller: 'FishermanCtrl'
+      }).
       otherwise({
         redirectTo: '/ads'
       });
