@@ -16,15 +16,20 @@ fresherControllers.controller('MarketPlaceCtrl',
     $scope.defaultQuantity=1;
     $scope.ads={};
     $scope.getAd = function(){
-      $http.get('/ads/posts.json')
-      .success(function(response){
-        $scope.ads = response.ads;
+      $http({method: 'GET',
+            url: "http://www.freshr-prod.elasticbeanstalk.com/angularApp",
+            headers: {'Accept': 'application/json','Content-Type': 'application/json'}
+          })
+      .success(function(data,status,headers,config){
+        $scope.test = JSON.parse(data);
+        $scope.ads = JSON.parse(data);
       })
-      .error(function(response){
+      .error(function(data,status,headers,config){
       });
     };
     $scope.getAd();
   });
+
 // fresherControllers.controller("OrderCtrl",function($scope,$http){
 //   $scope.currentStep=1;
 //   $scope.defaultQuantity=1;

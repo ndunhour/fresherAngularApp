@@ -6,7 +6,8 @@
         "species": "mahi-mahi",
         "quantity": "4",
         "weight": "5lbs",
-        "price": 4
+        "price": 4,
+        "phone": "555555555"
 
     },
     {
@@ -15,7 +16,8 @@
         "species": "mahi-mahi",
         "quantity": "4",
         "weight": "5lbs",
-        "price": 4
+        "price": 4,
+        "phone": "7777777777"
     }
   ]
 }
