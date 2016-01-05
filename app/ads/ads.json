@@ -1,35 +1,73 @@
 [
     {
         "date": 0,
-        "id": "mahi-mahi",
+        "id": 0,
         "imageUrl": "http://dolphindays.org/wp-content/uploads/2011/12/MahiMahi.jpg",
-        "name": "Steve ",
+        "fisherman": "company name",
+        "name": "Mike",
         "species": "Mahi Mahi",
         "quantity": 4,
         "weight": "10-20 lb",
         "price": 5,
-        "landing": "west-side"
+        "location": "west-side",
+        "whole": true,
+        "perPound": true,
+        "phone": 8085555555,
+        "additionalDetails": "blah",
+        "comments": [
+          {"comment 1":
+            {"commentText": "nice catch",
+            "replies": [
+              "thanks", "you want buy"]}
+          },
+        ],
+        "sold": true,
+
     },
     {
         "date": 1,
-        "id": "opakapaka",
+        "id": 1,
         "imageUrl": "http://www.fooduniversity.com/foodu/seafood_c/resources/ocean%20fin/Warm%20Water/Snapper/Opakapaka/Opakapaka.gif",
-        "name": "James",
+        "name": "sam",
         "species": "Opakapaka",
         "quantity": 10,
         "weight": "20 lb",
         "price": 10,
-        "landing": "north shore"
+        "location": "north shore",
+        "whole": true,
+        "perPound": true,
+        "phone": 8085555555,
+        "additionalDetails": "blah",
+        "comments": [
+          {"comment 1":
+            {"commentText": "nice catch",
+            "replies": [
+              "thanks", "you want buy"]}
+          },
+        ],
+        "sold": true,
     },
     {
         "date": 2,
-        "id": "trumpet-fish",
+        "id": 2,
         "imageUrl": "http://www.qsl.net/zf2nt/Little%20Cayman%20Under%20Water/Trumpet_Fish.JPG",
         "name": "Nemo",
         "species": "Trumpet Fish",
         "quantity": 4,
         "weight": "5-10lb",
         "price": 3,
-        "landing": "east-side"
+        "location": "east-side",
+        "whole": true,
+        "perPound": true,
+        "phone": 8085555555,
+        "additionalDetails": "blah",
+        "comments": [
+          {"comment 1":
+            {"commentText": "nice catch",
+            "replies": [
+              "thanks", "you want buy"]}
+          },
+        ],
+        "sold": true,
     }
 ]

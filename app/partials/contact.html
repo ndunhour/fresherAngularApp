@@ -1,0 +1,58 @@
+<div class="contact" ng-controller"ContactCtrl">
+
+  <div class="contact-name">
+    <h5>{{ad.name}}</h5>
+    <h5>{{ad.phone}}</h5>
+  </div>
+
+  <div class="contact-ad-info">
+    <ul>
+      <li>
+        <span>Quantity: </span>
+        <dl>
+          <dt>{{ad.quantity}}</dt>
+        </dl>
+      </li>
+      <li>
+        <span>Weight: </span>
+        <dl>
+          <dt>{{ad.weight}}</dt>
+        </dl>
+      </li>
+      <li>
+        <span>Price: </span>
+        <dl>
+          <dt>{{ad.price}}</dt>
+        </dl>
+      </li>
+      <li>
+        <span>Landing: </span>
+        <dl>
+          <dt>{{ad.landing}}</dt>
+        </dl>
+      </li>
+      <li>
+        <span>Additional Details: </span>
+        <dl>
+          <dt>{{ad.addDetails}}</dt>
+        </dl>
+      </li>
+    </ul>
+  </div>
+
+  <div class="contact-comments">
+    <h5>Comments</h5>
+    <input type="text" value="{{ad.name}}">
+    <textarea name="contact-comment" id="" cols="30" rows="10">Leave Comment</textarea>
+  </div>
+
+  <div class="contact-submit">
+    <button><a href="#">COMMENT</a></button>
+  </div>
+
+  <div class="contact-marketplace">
+    <button><a href="#ads">MARKETPLACE</a></button>
+  </div>
+</div>
+
+

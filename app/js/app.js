@@ -6,16 +6,16 @@ var fresherApp = angular.module('fresherApp', [
   'ngRoute',
   'fresherAnimations',
   'fresherControllers',
-  'fresherFilters',
-  'fresherServices'
+  'fresherFilters'
+  // 'fresherServices'
 ]);
 
 fresherApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/ads', {
-        templateUrl: 'partials/ad-list.html',
-        controller: 'AdListCtrl'
+        templateUrl: 'partials/marketPlace.html',
+        controller: 'MarketPlaceCtrl'
       }).
       when('/ads/:adId', {
         templateUrl: 'partials/ad-detail.html',
@@ -27,6 +27,10 @@ fresherApp.config(['$routeProvider',
       }).
       when('/fisherman', {
         templateUrl: 'partials/fisherman.html',
+        controller: 'FishermanCtrl'
+      }).
+      when('/contact', {
+        templateUrl: 'partials/contact.html',
         controller: 'FishermanCtrl'
       }).
       otherwise({

@@ -2,13 +2,54 @@
 
 /* Controllers */
 
-var fresherControllers = angular.module('fresherControllers', []);
+var fresherControllers = angular.module('fresherControllers',[]);
 
-fresherControllers.controller('AdListCtrl', ['$scope', 'Ad',
-  function($scope, Ad) {
-    $scope.ads = Ad.query();
-    $scope.orderProp = 'age';
-  }]);
+// fresherControllers.controller('MarketPlaceCtrl', ['$scope', 'Ad',
+//   function($scope, Ad) {
+//     $scope.ads = Ad.query();
+//     $scope.orderProp = 'age';
+//   }]);
+
+fresherControllers.controller('MarketPlaceCtrl',
+  function($scope, $http){
+    $scope.currentStep=1;
+    $scope.defaultQuantity=1;
+    $scope.ads={};
+    $scope.getAd = function(){
+      $http.get('/ads/posts.json')
+      .success(function(response){
+        $scope.ads = response.ads;
+      })
+      .error(function(response){
+      });
+    };
+    $scope.getAd();
+  });
+// fresherControllers.controller("OrderCtrl",function($scope,$http){
+//   $scope.currentStep=1;
+//   $scope.defaultQuantity=1;
+//   $scope.item={};
+//   $scope.getItem = function(){
+//   $http.get('http://localhost:8000/app/ads/posts.json')
+//     .success(function(data, status, headers, config) {
+//       $scope.item = data;
+//     })
+//     .error(function(data, status, headers, config) {
+//     });
+//   };
+
+//   $scope.getItem();
+
+//   });
+
+fresherControllers.controller('FishermanCtrl',
+  function($scope, $http){
+    $http.get('http://localhost:8000/app/ads/posts.json')
+    .success(function(response){
+      $scope.fisherman = response.fisherman;
+    });
+  });
+
 
 fresherControllers.controller('AdDetailCtrl', ['$scope', '$routeParams', 'Ad',
   function($scope, $routeParams, Ad) {
@@ -43,7 +84,8 @@ fresherControllers.controller('CreateCtrl', ['$scope',
         {id: '5', size: 'West Oahu'},
         {id: '5', size: 'Central Oahu'},
         {id: '6', size: 'All of Oahu'}
-      ]
+      ],
+      additionalDetails: 'Additional Details'
 
     };
     for(var i=0; i<50; i++) {
@@ -56,13 +98,13 @@ fresherControllers.controller('CreateCtrl', ['$scope',
   }
   ]);
 
-fresherControllers.controller('FishermanCtrl',['$scope',
-  function($scope){
-    $scope.user = {
-      userName: "Name",
-      userPhone: "Phone",
-      location: "Location",
-      licence: "Licence",
-      bio: "Bio"
-    };
-  }]);
+// fresherControllers.controller('FishermanCtrl',['$scope',
+//   function($scope){
+//     $scope.fisherman = {
+//       name: "Santa Claus",
+//       phone: "808-555-5555",
+//       location: "North Pole",
+//       licence: "CDL Sled",
+//       bio: "Bringing toys to the good kids"
+//     };
+//   }]);

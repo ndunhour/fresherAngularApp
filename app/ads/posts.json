@@ -1,0 +1,22 @@
+{
+  "ads": [
+    {
+        "name": "Naomi",
+        "location": "west-side",
+        "species": "mahi-mahi",
+        "quantity": "4",
+        "weight": "5lbs",
+        "price": 4
+
+    },
+    {
+        "name": "something",
+        "location": "north shore",
+        "species": "mahi-mahi",
+        "quantity": "4",
+        "weight": "5lbs",
+        "price": 4
+    }
+  ]
+}
+

@@ -2,14 +2,10 @@
 
 /* Services */
 
-var fresherServices = angular.module('fresherServices', ['ngResource']);
-
-fresherServices.factory('Ad', ['$resource',
-  function($resource){
-    return $resource('ads/:adId.json', {}, {
-      query: {method:'GET', params:{adId:'ads'}, isArray:true}
-    });
-  }]);
-
-
-
+// var fresherServices = angular.module('fresherServices').factory('fresherServices', function($http){
+//  return {
+//         getdata: function(){
+//             return $http.get('/ads/posts.json'); // You Have to give Correct Url either Local path or api etc
+//         }
+//     };
+// });
